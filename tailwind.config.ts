@@ -1,11 +1,11 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 export default <Partial<Config>>{
   theme: {
     extend: {
       spacing: {
-        '144': '36rem',
-      }
-    }
-  }
-}
+        144: '36rem',
+      },
+    },
+  },
+};
