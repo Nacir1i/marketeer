@@ -1,8 +1,6 @@
 <template>
   <div>
     <NuxtRouteAnnouncer />
-    <UContainer>
-      <UBadge>lmao</UBadge>
-    </UContainer>
+    <NuxtPage />
   </div>
 </template>
