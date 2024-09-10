@@ -1,4 +1,5 @@
 import stylistic from '@stylistic/eslint-plugin';
+import tailwind from 'eslint-plugin-tailwindcss';
 // @ts-check
 import withNuxt from './.nuxt/eslint.config.mjs';
 
@@ -9,4 +10,4 @@ export default withNuxt({
   plugins: {
     '@stylistic': stylistic,
   },
-});
+}).append(...tailwind.configs['flat/recommended']);
