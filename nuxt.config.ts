@@ -9,4 +9,7 @@ export default defineNuxtConfig({
       stylistic: true,
     },
   },
+  runtimeConfig: {
+    connectionString: process.env.NUXT_DATABASE_URL,
+  },
 });
