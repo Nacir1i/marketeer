@@ -10,22 +10,33 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "vitest run"
+    "test": "vitest run",
+    "drizzle:generate": "drizzle-kit generate --config ./drizzle.config.ts",
+    "drizzle:migrate": "drizzle-kit migrate --config ./drizzle.config.ts",
+    "drizzle:drop": "drizzle-kit drop",
+    "docker:dev:start": "docker compose up dev -d",
+    "docker:dev:stop": "docker compose rm dev -s -f -v",
+    "docker:dev:restart": "pnpm docker:dev:stop && pnpm docker:dev:start"
   },
   "dependencies": {
     "@nuxt/ui": "^2.18.4",
+    "drizzle-orm": "^0.33.0",
     "nuxt": "^3.13.0",
+    "postgres": "^3.4.4",
     "tailwindcss": "^3.4.10",
     "vue": "latest",
-    "vue-router": "latest"
+    "vue-router": "latest",
+    "zod": "^3.23.8"
   },
   "packageManager": "pnpm@9.7.0+sha512.dc09430156b427f5ecfc79888899e1c39d2d690f004be70e05230b72cb173d96839587545d09429b55ac3c429c801b4dc3c0e002f653830a420fa2dd4e3cf9cf",
   "devDependencies": {
     "@nuxt/eslint": "^0.5.6",
     "@nuxt/test-utils": "^3.14.2",
-    "@stylistic/eslint-plugin": "^2.8.0",
-    "@vue/test-utils": "^2.4.6",
     "@playwright/test": "^1.47.0",
+    "@stylistic/eslint-plugin": "^2.8.0",
+    "@types/pg": "^8.11.8",
+    "@vue/test-utils": "^2.4.6",
+    "drizzle-kit": "^0.24.2",
     "eslint-plugin-tailwindcss": "^3.17.4",
     "happy-dom": "^15.7.3",
     "playwright-core": "^1.47.0",
