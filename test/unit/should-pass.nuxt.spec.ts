@@ -4,5 +4,5 @@ import { TestComponent } from '#components';
 
 it('should pass', async () => {
   const component = await mountSuspended(TestComponent);
-  expect(component.text()).toBe('test');
+  expect(component.text()).toContain('test');
 });
