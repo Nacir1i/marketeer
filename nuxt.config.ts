@@ -11,5 +11,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     connectionString: '',
+    facebookId: '',
+    facebookSecret: '',
   },
 });
