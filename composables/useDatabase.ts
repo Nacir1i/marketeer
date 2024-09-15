@@ -4,7 +4,7 @@ import postgres from 'postgres';
 let sql: postgres.Sql | null = null;
 let db: PostgresJsDatabase | null = null;
 
-function useDatabase() {
+export default function () {
   const config = useRuntimeConfig();
 
   if (!config.connectionString) throw new Error('Missing db url in runtime config');
@@ -20,5 +20,3 @@ function useDatabase() {
 
   return { db, sql };
 };
-
-export default useDatabase;

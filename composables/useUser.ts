@@ -1,6 +1,6 @@
 import type { User } from 'lucia';
 
-export const useUser = () => {
+export default function () {
   const user = useState<User | null>('user', () => null);
   return user;
 };
