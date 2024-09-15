@@ -1,6 +1,6 @@
 import z from 'zod';
 import test, { type NewTest } from '../db/schema/test';
-import useDatabase from '~/composables/useDatabse';
+import useDatabase from '~/composables/useDatabase';
 
 const schema: z.ZodType<NewTest> = z.object({
   name: z.string(),
