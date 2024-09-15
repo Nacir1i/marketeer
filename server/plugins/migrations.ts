@@ -1,5 +1,5 @@
 import { migrate } from 'drizzle-orm/postgres-js/migrator';
-import useDatabase from '~/composables/useDatabse';
+import useDatabase from '~/composables/useDatabase';
 
 export default defineNitroPlugin(async (_nitroApp) => {
   const client = useDatabase();
