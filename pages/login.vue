@@ -78,14 +78,14 @@ async function signup(event: FormSubmitEvent<Schema>) {
             @submit="login"
           >
             <UFormGroup label="Email" name="email">
-              <UInput v-model="loginState.email" />
+              <UInput v-model="loginState.email" disabled />
             </UFormGroup>
 
             <UFormGroup label="Password" name="password">
-              <UInput v-model="loginState.password" type="password" />
+              <UInput v-model="loginState.password" type="password" disabled />
             </UFormGroup>
 
-            <UButton type="submit">
+            <UButton disabled>
               Submit
             </UButton>
           </UForm>
@@ -97,17 +97,27 @@ async function signup(event: FormSubmitEvent<Schema>) {
             @submit="signup"
           >
             <UFormGroup label="Email" name="email">
-              <UInput v-model="signupState.email" />
+              <UInput v-model="signupState.email" disabled />
             </UFormGroup>
 
             <UFormGroup label="Password" name="password">
-              <UInput v-model="signupState.password" type="password" />
+              <UInput v-model="signupState.password" type="password" disabled />
             </UFormGroup>
 
-            <UButton type="submit">
+            <UButton disabled>
               Submit
             </UButton>
           </UForm>
+
+          <UDivider label="OR" />
+
+          <UButton
+            to="http://localhost:3000/login/facebook"
+            color="black"
+            label="Login with Facebook"
+            icon="i-simple-icons-facebook"
+            block
+          />
         </UCard>
       </template>
     </UTabs>
