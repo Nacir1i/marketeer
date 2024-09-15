@@ -20,8 +20,11 @@
     "docker:dev:restart": "pnpm docker:dev:stop && pnpm docker:dev:start"
   },
   "dependencies": {
+    "@lucia-auth/adapter-drizzle": "^1.1.0",
+    "@node-rs/argon2": "^1.8.3",
     "@nuxt/ui": "^2.18.4",
     "drizzle-orm": "^0.33.0",
+    "lucia": "^3.2.0",
     "nuxt": "^3.13.0",
     "postgres": "^3.4.4",
     "tailwindcss": "^3.4.10",
