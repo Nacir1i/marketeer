@@ -1,5 +1,5 @@
 import test from '../db/schema/test';
-import useDatabase from '~/composables/useDatabse';
+import useDatabase from '~/composables/useDatabase';
 
 export default defineEventHandler(async (_event) => {
   const client = useDatabase();
