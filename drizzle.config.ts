@@ -8,6 +8,6 @@ export default defineConfig({
     casing: 'preserve',
   },
   dbCredentials: {
-    url: process.env.NUXT_DATABASE_URL!,
+    url: process.env.NUXT_CONNECTION_STRING!,
   },
 });
