@@ -1,4 +1,4 @@
-export const useAuthenticatedUser = () => {
+export default function () {
   const user = useUser();
   return computed(() => {
     const userValue = unref(user);
