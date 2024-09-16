@@ -38,14 +38,12 @@ export default defineEventHandler(async (event) => {
       return sendRedirect(event, '/');
     }
 
-    // return facebookUser;
-
     const userId = generateIdFromEntropySize(10);
     await client.db.insert(user).values({
       id: userId,
       email: facebookUser.email,
       username: facebookUser.name,
-      profile_picture: facebookUser.picture,
+      profile_picture: facebookUser.picture.data.url,
       facebook_id: facebookUser.id,
     });
     const session = await lucia.createSession(userId, {});
@@ -69,5 +67,9 @@ interface FacebookUser {
   id: number
   name: string
   email: string
-  picture: string
+  picture: {
+    data: {
+      url: string
+    }
+  }
 }
